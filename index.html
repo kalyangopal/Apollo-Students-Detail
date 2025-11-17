@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details Entry</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Apollo Computer Education</h1>
+        <h2>Student Details Entry</h2>
+
+        <div class="form-card">
+            <div class="input-group">
+                <label>Student Name</label>
+                <input type="text" id="name" placeholder="Enter student name">
+            </div>
+
+            <div class="input-group">
+                <label>Course</label>
+                <input type="text" id="courses" placeholder="Enter course">
+            </div>
+
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="number" id="mobileNumber" placeholder="Enter mobile number">
+            </div>
+
+            <div class="input-group">
+                <label>Course Joining Date</label>
+                <input type="date" id="joiningDate">
+            </div>
+            <div class="input-group">
+                <label>Course Completed Date</label>
+                <input type="date" id="completedDate">
+            </div>
+
+            <div class="input-group">
+                <label>Payment-1</label>
+                <input type="number" id="Payment1" placeholder="Enter team-1 fees">
+            </div>
+
+            <div class="input-group">
+                <label>Payment-2</label>
+                <input type="number" id="Payment2" placeholder="Enter team-2 fees">
+            </div>
+
+            <div class="input-group">
+                <label>Payment-3</label>
+                <input type="number" id="Payment3" placeholder="Enter team-3 fees">
+            </div>
+
+            <div class="input-group">
+                <label>Total Fees</label>
+                <input type="number" id="totalFees" placeholder="Enter total fees">
+            </div>
+
+            <div class="input-group">
+                <label>Balance Fees</label>
+                <input type="text" id="Balance" placeholder="Enter balance fees">
+            </div>
+
+            
+
+            <div class="input-group">
+                <label>Completion Status</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="status" value="Completed"> Completed</label>
+                    <label><input type="radio" name="status" value="Not Completed"> Not Completed</label>
+                </div>
+            </div>
+
+            <button class="btn-add" onclick="addStudent()">Add Student</button>
+        </div>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Mobile</th>
+                    <th>Course Joining Date</th>
+                    <th>Course Completed Date</th>
+                    <th>Payment-1</th>
+                    <th>Payment-2</th>
+                    <th>Payment-3</th>
+                    <th>Total</th>
+                    <th>Balance</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button class="btn-export" onclick="exportToExcel()">Download Excel</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
